@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  background-color: #8ed444;
+  color: white;
+  padding: 6px 13px;
+  transition: padding 0.3s ease;
+}
+
+.btn:hover {
+  padding: 5px 11px;
+}
+
+.hover {
+  transition: color 0.7s ease;
+  font-weight: 400;
+}
+
+.hover:hover {
+  color: #8ed444;
+}
+
+.hero {
+  background-image: url("/bg1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menue {
+  background-image: url("/bg2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add these CSS classes to your existing CSS */
+
+.testimonial-text {
+  animation: slideIn 10s infinite alternate ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(
+      -10px
+    ); /* Adjust the distance you want the text to move */
+    opacity: 0;
+  }
+}
+
+.mission {
+  background: url("/bg3.png");
+  background-size: 40%;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.start {
+  background: url("/bg4.jpg");
+  background-size: 40%;
+  background-position: left;
+  background-repeat: no-repeat;
+}
