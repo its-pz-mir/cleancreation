@@ -4,8 +4,8 @@ const Start = () => {
   return (
     <div>
       <div className="start my-24">
-        <div className="w-[80%] py-8">
-          <div className="z-10 bg-white shadow-xl px-8 py-12 w-[70%] ml-[36rem] shadow-current">
+        <div className="w-full lg:w-[80%] py-8">
+          <div className="z-10 bg-white shadow-xl px-8 py-12 w-full lg:w-[85%] xl:w-[70%] lg:ml-[36rem] shadow-current">
             <h1 className="text-5xl font-[500]">
               Get Started
               <br />

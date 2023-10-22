@@ -3,10 +3,10 @@ import Image from "next/image";
 const Work = () => {
   return (
     <div className="work flex w-full justify-center items-center">
-      <div className="my-28 w-3/5 flex flex-col  justify-center items-center">
+      <div className="my-28 2xl:w-3/5 xl:w-9/12 lg:w-5/6 md:w-11/12 w-full flex flex-col  justify-center items-center">
         <h2 className="text-[49px] font-[500] capitalize">How it Works</h2>
-        <div className="items flex justify-between w-full mt-20">
-          <div className="w-1/4 p-4 text-center">
+        <div className="items flex flex-col md:flex-row md:justify-between justify-center items-center w-full mt-20">
+          <div className="md:w-1/4 w-full py-4 px-12 text-center">
             <Image
               src={"/PLACEORDER.svg"}
               alt="Picture of the author"
@@ -22,7 +22,7 @@ const Work = () => {
             </p>
           </div>
 
-          <div className="w-1/4 p-4 text-center">
+          <div className="md:w-1/4 w-full py-4 px-12 text-center">
             <Image
               src={"/COOK.svg"}
               alt="Picture of the author"
@@ -37,7 +37,7 @@ const Work = () => {
             </p>
           </div>
 
-          <div className="w-1/4 p-4 text-center">
+          <div className="md:w-1/4 w-full py-4 px-12 text-center">
             <Image
               src={"/DELIVER.svg"}
               alt="Picture of the author"
@@ -53,7 +53,7 @@ const Work = () => {
             </p>
           </div>
 
-          <div className="w-1/4 p-4 text-center">
+          <div className="md:w-1/4 w-full py-4 px-12 text-center">
             <Image
               src={"/HEAT.svg"}
               alt="Picture of the author"

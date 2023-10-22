@@ -5,7 +5,7 @@
 .btn {
   background-color: #8ed444;
   color: white;
-  padding: 6px 13px;
+  padding: 6px 16px;
   transition: padding 0.3s ease;
 }
 
@@ -61,6 +61,12 @@
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .mission {
+    background-image: none;
+  }
+}
+
 .mission {
   background: url("/bg3.png");
   background-size: 40%;
@@ -73,4 +79,12 @@
   background-size: 40%;
   background-position: left;
   background-repeat: no-repeat;
+}
+
+.left {
+  display: none;
+}
+
+.res {
+  display: none;
 }

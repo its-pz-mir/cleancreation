@@ -3,13 +3,13 @@ import React from "react";
 const Mission = () => {
   return (
     <div className="mission mt-16">
-      <div className="w-[80%] py-8  ">
-        <div className="z-10 bg-white w-[70%] px-8 py-8 shadow-xl shadow-current mx-auto">
-          <h1 className="text-5xl font-[500] mr-4">
+      <div className="w-full lg-w-[80%] py-8  ">
+        <div className="z-10 bg-white w-full lg:w-[70%] xl:w-[60%] px-2 lg:ml-40 md:px-4 lg:px-8 py-8 shadow-xl shadow-current mx-auto">
+          <h1 className="text-5xl text-center lg:text-start font-[500] mr-4">
             Our mission is to make clean eating delicious and convenient for
             everyone.
           </h1>
-          <p className="mt-6 text-lg">
+          <p className="mt-6 text-center lg:text-start px-2 lg:px-8 text-lg">
             Our mission is to make clean eating simple and convenient. You
             should never have to sacrifice quality, flavor or nutrition when it
             comes to your, which is why we offer the highest quality ingredients

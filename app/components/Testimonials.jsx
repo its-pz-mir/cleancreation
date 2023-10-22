@@ -70,13 +70,13 @@ const Testimonials = () => {
 
   return (
     <div className="mt-24 w-full bg-[#8ed44424]">
-      <div className="w-[60%] mx-auto py-12">
-        <h4 className="text-5xl capitalize font-[500] text-center mb-10">
+      <div className="w-full px-3 mx-auto py-12">
+        <h4 className="text-4xl capitalize font-[500] text-center mb-10">
           What people are saying
         </h4>
         <p
           // Here i want to make a class that should work after 10 seconds
-          className={`testimonial-text w-[70%] text-[22px] mx-auto text-center testimonial-text `}
+          className={`testimonial-text w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] text-[22px] mx-auto text-center testimonial-text `}
         >
           {currentTestimonial.testimonial}
         </p>

@@ -4,17 +4,23 @@ import Image from "next/image";
 import Link from "next/link";
 import { TbShoppingBag } from "react-icons/tb";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { BiMenu } from "react-icons/bi";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [show, setShow] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
+  const showMenue = () => {
+    setShow(!show);
+  };
+
   return (
     <div className="flex justify-between px-12 py-2 items-center border border-b">
-      <div className="left space-x-7 flex items-center">
+      <div className="left md:space-x-7 md:flex md:items-center">
         <Link href={"#"} className="hover">
           Current Menue
         </Link>
@@ -30,11 +36,11 @@ const Header = () => {
         <Image src="/logo.png" alt="Logo Image" width={66} height={50} />
       </div>
       <div className="right">
-        <ul className="flex space-x-7">
-          <li className="hover">
+        <ul className="flex space-x-4 sm:space-x-6 md:space-x-7 items-center justify-center">
+          <li className="hover res sm:block">
             <Link href={"#"}>Grab & Go</Link>
           </li>
-          <li className="hover">
+          <li className="hover res sm:block">
             <Link href={"#"}>Blog</Link>
           </li>
           <li className="hover">
@@ -48,6 +54,10 @@ const Header = () => {
           <li className="hover">
             <Link href={"#"}>Signup</Link>
           </li>
+          <li className="ico md:hidden pointer inline-block">
+            <BiMenu onClick={showMenue} className="relative" />
+            {show && <Menu />}
+          </li>
         </ul>
       </div>
     </div>
@@ -55,6 +65,36 @@ const Header = () => {
 };
 
 export default Header;
+
+function Menu() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+  return (
+    <>
+      <div className="space-x-7 absolute w-full bg-white left-0 top-20 justify-center space-y-4 flex flex-col items-center ">
+        <Link href={"#"} className="hover">
+          Current Menue
+        </Link>
+        <div className="relative">
+          <button className="btn flex items-center" onClick={toggleDropdown}>
+            Shop
+            <RiArrowDropDownLine className="w-7 h-7" />
+          </button>
+          {isOpen && <Profile />}
+        </div>
+        <li className="hover sm:hidden">
+            <Link href={"#"}>Grab & Go</Link>
+          </li>
+          <li className="hover sm:hidden">
+            <Link href={"#"}>Blog</Link>
+          </li>
+      </div>
+    </>
+  );
+}
 
 function Profile() {
   const dropText = "hover:bg-[#8ed444] hover:text-white hover:rounded-xl";
